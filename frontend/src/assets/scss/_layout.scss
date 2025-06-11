@@ -1,0 +1,73 @@
+/* Estilos para layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+.card {
+  background-color: $light-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+}
+
+.section {
+  margin-bottom: $spacing-xl;
+  
+  &-title {
+    font-size: $font-size-xlarge;
+    margin-bottom: $spacing-md;
+    color: $secondary-color;
+    border-bottom: 2px solid $primary-color;
+    padding-bottom: $spacing-xs;
+  }
+}
+
+/* Grid simples */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -$spacing-sm;
+  
+  .col {
+    flex: 1;
+    padding: 0 $spacing-sm;
+    min-width: 0; /* Evita overflow em conteúdos grandes */
+    
+    @media (max-width: $breakpoint-md) {
+      flex: 0 0 100%;
+      margin-bottom: $spacing-md;
+    }
+  }
+}
+
+/* Utilitários de espaçamento */
+.mt-1 { margin-top: $spacing-xs; }
+.mt-2 { margin-top: $spacing-sm; }
+.mt-3 { margin-top: $spacing-md; }
+.mt-4 { margin-top: $spacing-lg; }
+.mt-5 { margin-top: $spacing-xl; }
+
+.mb-1 { margin-bottom: $spacing-xs; }
+.mb-2 { margin-bottom: $spacing-sm; }
+.mb-3 { margin-bottom: $spacing-md; }
+.mb-4 { margin-bottom: $spacing-lg; }
+.mb-5 { margin-bottom: $spacing-xl; }
+
+/* Utilitários de alinhamento */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+/* Utilitários de display */
+.d-flex { display: flex; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.align-center { align-items: center; }
+.flex-wrap { flex-wrap: wrap; }
+
+/* Utilitários de visibilidade */
+.hidden { display: none; }

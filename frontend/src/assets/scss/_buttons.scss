@@ -1,0 +1,93 @@
+/* Estilos para botões */
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius;
+  border: none;
+  font-size: $font-size-base;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color $transition-speed, transform $transition-speed;
+  text-align: center;
+  min-width: 120px;
+  
+  /* Botões grandes para melhor acessibilidade */
+  &.btn-large {
+    padding: $spacing-md $spacing-lg;
+    font-size: $font-size-large;
+    min-width: 150px;
+  }
+  
+  /* Botão primário */
+  &.btn-primary {
+    background-color: $primary-color;
+    color: $light-color;
+    
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      transform: translateY(-2px);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Botão secundário */
+  &.btn-secondary {
+    background-color: $secondary-color;
+    color: $light-color;
+    
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+      transform: translateY(-2px);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Botão de sucesso */
+  &.btn-success {
+    background-color: $success-color;
+    color: $light-color;
+    
+    &:hover {
+      background-color: darken($success-color, 10%);
+      transform: translateY(-2px);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Botão de erro/perigo */
+  &.btn-error {
+    background-color: $error-color;
+    color: $light-color;
+    
+    &:hover {
+      background-color: darken($error-color, 10%);
+      transform: translateY(-2px);
+    }
+    
+    &:active {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Botão desabilitado */
+  &:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    transform: none;
+    
+    &:hover {
+      background-color: #ccc;
+      transform: none;
+    }
+  }
+}

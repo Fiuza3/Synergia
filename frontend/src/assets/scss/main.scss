@@ -1,0 +1,139 @@
+/* Arquivo principal de estilos SCSS */
+
+/* Importando parciais */
+@import 'reset';
+@import 'buttons';
+@import 'forms';
+@import 'layout';
+
+/* Estilos específicos para componentes que não se encaixam nos parciais */
+
+/* Estilos para notificações */
+.notification {
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius;
+  margin-bottom: $spacing-md;
+  font-weight: bold;
+  position: fixed;
+  top: $spacing-md;
+  right: $spacing-md;
+  z-index: 1000;
+  box-shadow: $box-shadow;
+  transition: opacity 0.3s, transform 0.3s;
+  
+  &.success {
+    background-color: $success-color;
+    color: white;
+  }
+  
+  &.error {
+    background-color: $error-color;
+    color: white;
+  }
+  
+  &.warning {
+    background-color: $warning-color;
+    color: white;
+  }
+  
+  &.info {
+    background-color: $primary-color;
+    color: white;
+  }
+}
+
+/* Estilos para tabelas */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: $spacing-md;
+  
+  th, td {
+    padding: $spacing-sm;
+    text-align: left;
+    border-bottom: 1px solid $border-color;
+  }
+  
+  th {
+    background-color: lighten($background-color, 2%);
+    font-weight: bold;
+  }
+  
+  tr:hover {
+    background-color: lighten($background-color, 3%);
+  }
+}
+
+/* Estilos para paginação */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: $spacing-lg;
+  
+  .page-item {
+    margin: 0 $spacing-xs;
+    
+    .page-link {
+      display: inline-block;
+      padding: $spacing-xs $spacing-sm;
+      border: 1px solid $border-color;
+      border-radius: $border-radius;
+      color: $text-color;
+      
+      &:hover {
+        background-color: $primary-color;
+        color: $light-color;
+        text-decoration: none;
+      }
+      
+      &.active {
+        background-color: $primary-color;
+        color: $light-color;
+        border-color: $primary-color;
+      }
+    }
+  }
+}
+
+/* Estilos para a agenda */
+.agenda-item {
+  padding: $spacing-md;
+  border-left: 4px solid $primary-color;
+  background-color: $light-color;
+  margin-bottom: $spacing-sm;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  
+  &.consulta {
+    border-left-color: $primary-color;
+  }
+  
+  &.reuniao {
+    border-left-color: $warning-color;
+  }
+  
+  &.cirurgia {
+    border-left-color: $error-color;
+  }
+  
+  .agenda-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $spacing-xs;
+    
+    .agenda-time {
+      font-weight: bold;
+      color: $secondary-color;
+    }
+  }
+  
+  .agenda-patient {
+    font-size: $font-size-large;
+    margin-bottom: $spacing-xs;
+  }
+  
+  .agenda-details {
+    color: lighten($text-color, 20%);
+    font-size: $font-size-small;
+  }
+}
