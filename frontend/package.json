@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vue/cli-service": "^5.0.8",
     "pinia": "^2.1.6",
     "sass": "^1.66.1",
     "vue": "^3.3.4",
